@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <h1 id="Titulo del proyecto">Calculadora</h1>
+    <input id="first_value">Primer valor</input>
+    <br>
+    <br>
+    <input id="second_value">Segundo valor</input>
+    <br>
+    <br>
+    <br>
+    <button id="addition" onclick="addition()">( + )</button>
+    <button id="ubstraction" onclick="substraction()">( - )</button>
+    <button>( / )</button>
+    <button>( * )</button>
+    <br>
+    <br>
+    <br>
+    <h2 id="Operation_Result_Title">Resultado</h2>
+    <input id="operation_result" value="0"></input>
+</head>
+<body>
+    <script>     
+        function addition(){
+            const value_A = document.getElementById("first_value").value;
+            const value_B = document.getElementById("second_value").value;
+            console.log("primer valor es", value_A);
+            console.log("el segundo valor es", value_B)
+            const make_addition = parseInt(value_A) + parseInt(value_B)
+            console.log("the result iis", make_addition)
+            let show_result = document.getElementById("operation_result")
+            show_result = make_addition; 
+
+        }
+        function substraction(){
+            const value_A = document.getElementById("first_value").value;
+            const value_B = document.getElementById("second_value").value;
+            console.log("primer valor es", value_A);
+            console.log("el segundo valor es", value_B)
+            const make_substraction = parseInt(value_A) - parseInt(value_B);
+            console.log("the result is", make_substraction);
+            let operation_result = document.getElementById("operation_result");
+            operation_result.value=make_substraction;
+        }
+
+    </script>
+</body>
+</html>
