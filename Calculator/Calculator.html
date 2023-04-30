@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Calculator</h1>
+    <br>
+    <br>
+    <br>
+    <input id="number1">Number A</input>
+    <br>
+    <br>
+    <br>
+    <input id="number2">Number B</input>
+    <br>
+    <br>
+    <br>
+    <h2>Addition result</h2>
+    <input id="result_operation" value="0"></input>
+    <br>
+    <br>
+    <br>
+    <button id="make addition" onclick="addition()">(+)</button>
+    <button id="subtraction addition" onclick="subtraction()">(-)</button>
+    <button id="subtraction addition" onclick="division()">(/)</button>
+    <button id="subtraction addition" onclick="multiplication()">(*)</button>
+    
+    <script>
+        function division(){
+            const Valor_A=document.getElementById("number1").value;
+            const Valor_B=document.getElementById("number2").value;
+            if(Valor_A >= 0 && Valor_B >= 0){
+                console.log("division enter");
+                console.log("the first value is =>", Valor_A);
+                console.log("The second value is =>", Valor_B);
+                const Result_division = parseInt(Valor_A) / parseInt(Valor_B);
+                console.log("Result of division => ", Result_division);
+                let Result_of_division = document.getElementById("result_operation");
+                Result_of_division.value = Result_division;
+                }else{
+                        console.log("Check your values");
+                    }    
+        }
+
+        function multiplication(){
+            const Valor_A=document.getElementById("number1").value;
+            const Valor_B=document.getElementById("number2").value;
+            if(Valor_A >= 0 && Valor_B >= 0){
+                console.log("multiplication enter");
+                console.log("the first value is =>", Valor_A);
+                console.log("The second value is =>", Valor_B);
+                const Result_multiplication = parseInt(Valor_A) * parseInt(Valor_B);
+                console.log("Result of multiplication => ", Result_multiplication);
+                let Result_of_multiplication = document.getElementById("result_operation");
+                Result_of_multiplication.value = Result_multiplication;
+                }else{
+                        console.log("Check your values");
+                    }    
+        }
+        function subtraction(){
+            const Valor_A=document.getElementById("number1").value;
+            const Valor_B=document.getElementById("number2").value;
+            if(Valor_A >= 0 && Valor_B >= 0){
+                console.log("subtraction enter");
+                console.log("the first value is =>", Valor_A);
+                console.log("The second value is =>", Valor_B);
+                const Result_subtraction = parseInt(Valor_A) - parseInt(Valor_B);
+                console.log("Result of subtraction => ", Result_subtraction);
+                let Result_of_subtraction = document.getElementById("result_operation");
+                Result_of_subtraction.value = Result_subtraction;
+                }else{
+                        console.log("Check your values");
+                    }    
+        }
+        
+        function addition(){
+            const Valor_A=document.getElementById("number1").value;
+            const Valor_B=document.getElementById("number2").value;
+            if(Valor_A >= 0 && Valor_B >= 0){
+                console.log("addition enter");
+                console.log("the first value is =>", Valor_A);
+                console.log("The second value is =>", Valor_B);
+                const Result_Addition = parseInt(Valor_A) + parseInt(Valor_B);
+                console.log("Result of addition => ", Result_Addition);
+                let Result_of_Addition = document.getElementById("result_operation");
+                Result_of_Addition.value = Result_Addition;
+                }else{
+                        console.log("Check your values");
+                    }    
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <h1>Calculator</h1>
+    
+    <input id="first_value"> first value</input>
+    <br>
+    <br>
+    <input id="second_value"> second value</input>
+    <br>
+    <br>
+    <button id="addition" onclick="addition()">( + )</button>
+    <button>( - )</button>
+    <button>( / )</button>
+    <button>( * )</button>
+    <br>
+    <br>
+    <br>
+    <h2>Result</h2>
+   
+    <input id="Result" value="0"></input>
+</head>
+<body>
+    <script>
+        function addition(){
+            const value_A = document.getElementById("first_value").value;
+            const value_B = document.getElementById("second_value").value;
+            const addition_result = parseInt(value_A) + parseInt(value_B);
+            let show_result_addition = document.getElementById("Result");
+            show_result_addition.value = addition_result
+            console.log("the addition result is =>", show_result_addition);
+        }
+    </script>
+</body>
+</html>
