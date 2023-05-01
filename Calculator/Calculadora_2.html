@@ -4,36 +4,73 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculator</title>
+    <title>Document</title>
     <h1>Calculator</h1>
-    
-    <input id="first_value"> first value</input>
     <br>
-    <br>
-    <input id="second_value"> second value</input>
-    <br>
-    <br>
-    <button id="addition" onclick="addition()">( + )</button>
-    <button>( - )</button>
-    <button>( / )</button>
-    <button>( * )</button>
+    <input id="value_A">First value</input>
     <br>
     <br>
     <br>
-    <h2>Result</h2>
-   
-    <input id="Result" value="0"></input>
+    <input id="value_B">Second value</input>
+    <br>
+    <br>
+    <button id="Button_addition" onclick="addition()">( + )</button>
+    <button id="Buttton_subtraction" onclick="subtraction()">( - )</button>
+    <button id="Button_division" onclick="division()">( / )</button>
+    <button id="Button_multiplication" onclick="multiplication()">( * )</button>
+    <h2>Result operation</h2>
+    <br>
+    <input id="result_operation" value="0"></input>
 </head>
 <body>
     <script>
         function addition(){
-            const value_A = document.getElementById("first_value").value;
-            const value_B = document.getElementById("second_value").value;
-            const addition_result = parseInt(value_A) + parseInt(value_B);
-            let show_result_addition = document.getElementById("Result");
-            show_result_addition.value = addition_result
-            console.log("the addition result is =>", show_result_addition);
+            const valueA = document.getElementById("value_A").value;
+            const valueB = document.getElementById("value_B").value;
+                if(valueA > 0 && valueB > 0){
+                const make_addition = parseInt(valueA) + parseInt(valueB);
+                let addition_result = document.getElementById("result_operation");
+                addition_result.value = make_addition;
+                }else{
+                    console.log("por favor ingrese nuevamente los valores, los datos deben ser mayor a cero")
+                }
+            }       
+
+        function subtraction (){
+            const valueA = document.getElementById("value_A").value;
+            const valueB = document.getElementById("value_B").value;
+            if(valueA > 0 && valueB > 0){
+                const make_subtraction = Number(valueA) - parseInt(valueB);
+                let subtraction_result = document.getElementById("result_operation");
+                subtraction_result.value = make_subtraction;
+            }else{
+                console.log("por favor ingrese nuevamente los valores, los datos deben ser mayor a cero")
+            }
         }
+
+        function division(){
+            const valueA = document.getElementById("value_A").value;
+            const valueB = document.getElementById("value_B").value;
+            if(valueA > 0 && valueB > 0){
+                const make_division = Number(valueA) / Number(valueB)
+                let division_result = document.getElementById("result_operation");
+                division_result.value = make_division;
+            }else{
+                console.log("por favor ingrese nuevamente los valores, los datos deben ser mayor a cero")
+            }
+        }
+
+        function multiplication(){
+            const valueA = document.getElementById("value_A").value;
+            const valueB = document.getElementById("value_B").value;
+            if(valueA > 0 && valueB > 0){
+                const make_multiplication = Number(valueA) * Number(valueB);
+                let multiplication_result = document.getElementById("result_operation");
+                multiplication_result.value = make_multiplication;
+            }else{
+                console.log("por favor ingrese nuevamente los valores, los datos deben ser mayor a cero")
+            }
+        } 
     </script>
 </body>
 </html>
